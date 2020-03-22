@@ -9,7 +9,7 @@
       placeholder="type the hero name"
       name="heroName"
       id="heroName"
-      [(ngModel)]="hero.heroName"
+      [(ngModel)]="hero"
     />
   </mat-form-field>
   <br />
@@ -20,7 +20,7 @@
       placeholder="type the real name"
       name="realName"
       id="realName"
-      [(ngModel)]="hero.realName"
+      [(ngModel)]="hero"
     />
   </mat-form-field>
   <br />
@@ -31,13 +31,13 @@
       placeholder="type the hero skill"
       name="skill"
       id="skill"
-      [(ngModel)]="hero.skill"
+      [(ngModel)]="hero"
     />
   </mat-form-field>
   <br />
   <mat-form-field>
     <mat-label>Universe</mat-label>
-    <mat-select name="universe" id="universe" [(ngModel)]="hero.universe">
+    <mat-select name="universe" id="universe" [(ngModel)]="hero">
       <mat-option value="MCU">
         Marvel Cinematic Universe
       </mat-option>

@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Hero } from '../hero';
 import { DataService } from '../data.service';
 import { ActivatedRoute, Router } from '@angular/router';
-import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-hero-form',
@@ -24,8 +23,7 @@ export class HeroFormComponent implements OnInit {
   constructor(
     private ds: DataService,
     private route: ActivatedRoute,
-    private router: Router,
-    private snackBar: MatSnackBar
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -51,7 +49,7 @@ export class HeroFormComponent implements OnInit {
 
   postHero() {
     this.ds.postHero(this.hero).subscribe(response => {
-      this.snackBar.open('Hero added', '', { duration: 2000 });
+      // tampilkan notifikasi
       this.router.navigate(['/main']);
     });
   }
@@ -59,7 +57,7 @@ export class HeroFormComponent implements OnInit {
   deleteHero() {
     this.ds.deleteHero(this.hero).subscribe(
       response => {
-        this.snackBar.open('Hero deleted', '', { duration: 2000 });
+        // tampilkan notifikasi
         this.router.navigate(['/main']);
       },
       err => {
@@ -71,7 +69,7 @@ export class HeroFormComponent implements OnInit {
   updateHero() {
     this.ds.updateHero(this.hero).subscribe(
       response => {
-        this.snackBar.open('Hero updated', '', { duration: 2000 });
+        // tampilkan notifikasi
         this.router.navigate(['/main']);
       },
       err => {

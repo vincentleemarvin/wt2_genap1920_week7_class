@@ -19,14 +19,6 @@ const routes: Routes = [
       {
         path: 'main',
         component: MainComponent
-      },
-      {
-        path: 'hero',
-        component: HeroFormComponent
-      },
-      {
-        path: 'hero/:id',
-        component: HeroFormComponent
       }
     ]
   },

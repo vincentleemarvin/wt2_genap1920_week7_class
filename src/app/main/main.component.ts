@@ -11,15 +11,7 @@ export class MainComponent implements OnInit {
   heroes: Hero[];
   displayedColumns: string[] = ['heroName', 'realName', 'skill', 'universe'];
 
-  constructor(private ds: DataService) {}
+  constructor() {}
 
-  ngOnInit(): void {
-    this.ds.getHeroes().subscribe(heroes => {
-      this.heroes = heroes as Hero[];
-    });
-  }
-
-  test(row) {
-    console.log(row);
-  }
+  ngOnInit(): void {}
 }
