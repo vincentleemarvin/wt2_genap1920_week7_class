@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "week7"
+  "defaultProject": "week7",
+  "cli": {
+    "analytics": "36a2b5b6-813b-4cf0-8b68-f7f67ea9ee42"
+  }
 }
